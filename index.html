@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Intoduction to C</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+  </head>
+
+  <body>
+    <nav id="navbar">
+      <header>C Documentation</header>
+      <ul>
+        <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+        <li><a class="nav-link" href="#What_you_should_already_know">What you should already know</a></li>
+        <li><a class="nav-link" href="#Output_of_the_day">Output of the day</a></li>
+        <li><a class="nav-link" href="#Variables">Variables</a></li>
+        <li><a class="nav-link" href="#Data_Types">Data Types</a></li>
+        <li><a class="nav-link" href="#Input/Output">Input/Output</a></li>
+        <li><a class="nav-link" href="#Main_Function">Main Function</a></li>
+        <li><a class="nav-link" href="#All_Done!">All Done!</a></li>
+    </ul>
+    </nav>
+    <main id="main-doc">
+
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <p>C is a cross-platform, imperative programming language.It is a low-level language that is hard to learn and master.
+          Nevertheless, learning C makes it easier to learn all other languages.</p>
+        <p>C contains a standard library of datatypes, called stdio.h and stdlib.h, necessary for every project. </p>
+      </section>
+
+      <section class="main-section" id="What_you_should_already_know">
+        <header>What you should already know</header>
+        <p>Nothing!<br>
+        C is a basic low-level language, so you just need your laptop and happy coding :)</p>
+      </section>
+
+      <section class="main-section" id="Output_of_the_day">
+        <header>Output of the day</header>
+        <p>At the end of this page, you should be able to write your first code! <br> "Hello World" is a major step for all beginner
+          programmers.</p>
+        <code>
+          #include &#60;stdio.h&#62;<br>
+          int main()<br>
+          {<br>
+          &emsp; printf("Hello World!");<br>
+          &emsp; return 1;<br>
+          }
+        </code>
+        <p>To understand this code, you are going to learn about variables, data types, Input/Output, and the main function.</p>
+      </section>
+
+      <section class="main-section" id="Variables">
+        <header>Variables</header>
+        <p>Variables are names given to a storage area. This allows the program to access and manipulate the data inside this storage area.</p>
+        <p>They are used to store values or data that will be handled or used later on. They can store integers, decimals, and even characters
+          depending on their data type.</p>
+      </section>
+
+      <section class="main-section" id="Data_Types">
+        <header>Data Types</header>
+        <p>Data types refer to the type of data that can be stored in this variable. There are 4 main data types in C:</p>
+        <ul>
+          <li>int: integers</li>
+          <li>float: decimal numbers</li>
+          <li>double: decimal numbers with double precision</li>
+          <li>char: one character represented inside single quotations ( ' ' )</li>
+        </ul>
+        <p>Another type are strings: a sentence represented inside double quotations ( " " ).<br>More advanced data types may be arrays, and structs.</p>
+        <p>Variable declaration is informing the compiler of the variable's name & data type. <br> Variable initialization is assigning a value
+          to this variable</p>
+        <p>Declaration & Initialization:</p>
+        <code>
+          int x = 1;<br>
+          float y = 1.5; <br>
+          char z = 'A';<br>
+          float t = x + y; <span>Now t will contain 1+1.5 = 2.5</span><br>
+          char str[] = "How are you." <span>This is a declaration of a string</span>
+        </code>
+        <p><i>Characters are stored according to  ASCII values.</i></p>
+        <p>Now you know how to declare and initialize variables. But what if i want to get the value from the user or print it on the screen?</p>
+      </section>
+
+      <section class="main-section" id="Input/Output">
+        <header>Input/Output</header>
+        <p>The input/output functions come from the stdio (standard input ouput) library. Include it in your code by adding:<br>
+        <code>#include &#60;stdio.h&#62; </code><br>
+        at the top of your file. This will allow you to use all the pre-defined functions in this library, such as printf and scanf.
+        </p>
+        <h4>Printf</h4>
+        <p>printf is a function that takes variable or a string and prints it on the screen. The "f" stands for formatted: as you can format
+          the string inside the printf. Example:
+        </p>
+
+        <code>
+          printf("Hello World!"); <span>Output is: Hello World!</span> <br>
+          printf("Hello %i!",x); <span> Output is: Hello 1!</span>
+        </code>
+        <p>The %i are format specifiers used to identify the type of variable being printed.Some of the format specifiers in C are:</p>
+        <ul>
+          <li>%c: a single character</li>
+          <li>%s: a string</li>
+          <li>%i: an integer</li>
+          <li>%f: a float</li>
+          <li>%lf: a double</li>
+        </ul>
+
+        <h4>Scanf</h4>
+        <p>scanf is a function that prompts the user to enter a value on the keyboard, and then stores it in a variable. 
+          Depending on the format specifier used, the scanf can read integers, floats, strings, doubles, or characters.Example:
+        </p>
+
+        <code>
+          scanf("%i",&x); <span>Storing the integer in x.</span><br>
+          scanf("%c",&z); <span>Storing the character in z.</span><br>
+          scanf("%s",&str); <span>Storing the string in str</span>
+        </code>
+      </section>
+
+      <section class="main-section" id="Main_Function">
+        <header>Main Function</header>
+        <p>The main function in C, is what the compiler executes when run. Without it, execution will fail.<br> The main function takes no
+          arguments and returns an integer, usually 0 to indicate that the program finished successfully. It is written as:
+        </p>
+        <code>
+          int main()<br>
+          { <br>
+            &emsp;<i>Coding statements</i><br> 
+            &emsp;return 0;<br>
+          }
+        </code>
+      </section>
+
+      <section class="main-section" id="All_Done!">
+        <header>All Done!</header>
+        <p>Now all you need to do is link the previous infomation and write your first line of code!<br>
+          And maybe try to include your name instead of "World".<br><br>
+          Happy Coding!
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
